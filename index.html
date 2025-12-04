@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Application v07</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Survey Application</h1>
+            <p class="version">Version 0.7</p>
+        </header>
+        
+        <main>
+            <div id="surveyForm" class="survey-form">
+                <h2>Customer Satisfaction Survey</h2>
+                <form id="mainSurvey">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="satisfaction">Overall Satisfaction:</label>
+                        <select id="satisfaction" name="satisfaction" required>
+                            <option value="">--Please choose an option--</option>
+                            <option value="5">Very Satisfied</option>
+                            <option value="4">Satisfied</option>
+                            <option value="3">Neutral</option>
+                            <option value="2">Dissatisfied</option>
+                            <option value="1">Very Dissatisfied</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="comments">Comments:</label>
+                        <textarea id="comments" name="comments" rows="4"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Would you recommend us?</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="recommend" value="yes" required> Yes</label>
+                            <label><input type="radio" name="recommend" value="no"> No</label>
+                            <label><input type="radio" name="recommend" value="maybe"> Maybe</label>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Submit Survey</button>
+                </form>
+            </div>
+            
+            <div id="thankYou" class="thank-you hidden">
+                <h2>Thank You!</h2>
+                <p>Your survey response has been submitted successfully.</p>
+                <button id="newSurvey" class="submit-btn">Submit Another Response</button>
+            </div>
+            
+            <div class="results-section">
+                <h2>Survey Results</h2>
+                <div id="results">
+                    <p>No submissions yet.</p>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>&copy; 2025 Survey Application v07. All rights reserved.</p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
