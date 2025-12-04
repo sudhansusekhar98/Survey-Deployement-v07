@@ -102,7 +102,13 @@ class SurveyApp {
         html += '<h3 style="margin-top: 20px; color: #667eea;">Recent Submissions:</h3>';
         
         recentSubmissions.forEach(submission => {
-            const date = new Date(submission.timestamp).toLocaleString();
+            const date = new Date(submission.timestamp).toLocaleString('en-US', {
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit'
+            });
             html += `
                 <div class="result-item">
                     <h3>${submission.name}</h3>
